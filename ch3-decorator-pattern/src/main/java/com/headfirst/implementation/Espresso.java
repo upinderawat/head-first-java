@@ -4,10 +4,11 @@ import com.headfirst.Beverage;
 public class Espresso extends Beverage {
     public Espresso() {
         description = "Espresso";
+        price = 1.99;
     }
 
     public double cost() {
-        return 1.99;
+        return price;
     }
     public String getDescription() {
         return description;

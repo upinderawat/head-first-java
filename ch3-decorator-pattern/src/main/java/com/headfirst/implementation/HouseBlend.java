@@ -2,13 +2,14 @@ package com.headfirst.implementation;
 import com.headfirst.Beverage;
 
 public class HouseBlend extends Beverage{
-    String description = "House Blend Coffee";
 
     public HouseBlend() {
+        description = "House Blend Coffee";
+        price = .89;
     }
 
     public double cost() {
-        return .89;
+        return price;
     }
 
     public String getDescription() {
