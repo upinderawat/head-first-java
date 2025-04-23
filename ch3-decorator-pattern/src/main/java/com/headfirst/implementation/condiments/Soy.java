@@ -6,7 +6,7 @@ public class Soy extends CondimentDecorator{
 
     public Soy(Beverage beverage) {
         this.beverage = beverage;
-        this.price = .15;
+        this.size = beverage.getSize();
     }
 
     @Override
@@ -16,6 +16,17 @@ public class Soy extends CondimentDecorator{
 
     @Override
     public double cost() {
+        switch (this.size) {
+            case TALL:
+                price = 0.10;
+                break;
+            case GRANDE:
+                price = 0.15;
+                break;
+            case VENTI:
+                price = 0.20;
+                break;
+        }
         return this.price + beverage.cost();
     }
 }

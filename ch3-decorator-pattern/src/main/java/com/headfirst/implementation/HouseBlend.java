@@ -3,12 +3,23 @@ import com.headfirst.Beverage;
 
 public class HouseBlend extends Beverage{
 
-    public HouseBlend() {
+    public HouseBlend(Beverage.Size size) {
         description = "House Blend Coffee";
-        price = .89;
+        this.size = size;
     }
 
     public double cost() {
+        switch (size) {
+            case TALL:
+                price = 0.89;
+                break;
+            case GRANDE:
+                price = 0.99;
+                break;
+            case VENTI:
+                price = 1.09;
+                break;
+        }
         return price;
     }
 

@@ -5,10 +5,10 @@ import com.headfirst.implementation.condiments.*;
 
 public class Main {
     public static void main(String[] args) {
-        Beverage beverage = new Espresso();
+        Beverage beverage = new Espresso(Beverage.Size.TALL);
         System.out.println(beverage.getDescription() + " $" + beverage.cost());
 
-        Beverage beverage2 = new HouseBlend();
+        Beverage beverage2 = new HouseBlend(Beverage.Size.TALL);
         beverage2 = new Mocha(beverage2);
         beverage2 = new Soy(beverage2);
         beverage2 = new Whip(beverage2);
